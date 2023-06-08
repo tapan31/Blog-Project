@@ -19,32 +19,32 @@ export default function Sidebar() {
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Life">
+            <Link className="link1" to="/posts?cat=Life">
               Life
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Music">
+            <Link className="link1" to="/posts?cat=Music">
               Music
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Sport">
+            <Link className="link1" to="/posts?cat=Sport">
               Sport
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Style">
+            <Link className="link1" to="/posts?cat=Style">
               Style
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Tech">
+            <Link className="link1" to="/posts?cat=Tech">
               Tech
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Cinema">
+            <Link className="link1" to="/posts?cat=Cinema">
               Cinema
             </Link>
           </li>

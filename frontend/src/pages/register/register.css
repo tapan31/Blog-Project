@@ -20,6 +20,10 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  background-color: rgba(121, 112, 112, 0.229);
+  padding: 3%;
+  width: 30%;
+  border-radius: 10px;
 }
 
 .registerForm > label {
