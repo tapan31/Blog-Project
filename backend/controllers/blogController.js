@@ -64,6 +64,7 @@ const updateBlog = async (req, res) => {
   }
 }
 
+// Delete a blog
 const deleteBlog = async (req, res) => {
   const { id } = req.params
   // checking if the id is valid or not

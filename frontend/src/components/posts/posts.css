@@ -1,0 +1,14 @@
+.posts {
+  flex: 6;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.blogs h1 {
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin: 3%;
+  text-transform: uppercase;
+}
