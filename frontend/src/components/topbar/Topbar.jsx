@@ -1,15 +1,26 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 export default function Topbar() {
-  const user = true;
+  const { user, dispatch } = useContext(Context);
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
+  const PF = "http://localhost:4000/images/";
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link to="/" className="navbar-brand">
             Blogger
-          </a>
+          </Link>
+          {/* <a className="navbar-brand" href="#">
+            Blogger
+          </a> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -33,7 +44,13 @@ export default function Topbar() {
                   WRITE
                 </Link>
               </li>
-              {user && <li className="nav-link">LOGOUT</li>}
+              {user && (
+                <li className="nav-link">
+                  <Link className="link" onClick={handleLogout}>
+                    LOGOUT
+                  </Link>
+                </li>
+              )}
               {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -80,7 +97,11 @@ export default function Topbar() {
                 <Link className="link" to="/settings">
                   <img
                     className="topImg"
-                    src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    src={
+                      user.profilePic
+                        ? PF + user.profilePic
+                        : "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                    }
                     alt=""
                   />
                 </Link>
@@ -99,13 +120,13 @@ export default function Topbar() {
                 </ul>
               )}
             </div>{" "}
-            <form className="d-flex">
-              {/* <input
+            {/* <form className="d-flex">
+              <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-              /> */}
+              />
               <ul className="topList">
                 <li className="topListItem">
                   <Link className="link" to="/login">
@@ -121,7 +142,7 @@ export default function Topbar() {
               <button className="btn btn-outline-success" type="submit">
                 <i className="topSearchIcon fas fa-search"></i>
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>

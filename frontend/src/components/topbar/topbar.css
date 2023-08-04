@@ -67,4 +67,5 @@
 
 li > a {
   text-decoration: none;
+  color: #444 !important;
 }
